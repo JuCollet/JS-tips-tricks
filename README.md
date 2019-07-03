@@ -45,3 +45,9 @@ const user = {
 // user === { phone: '00000', age: '42', name: 'foo', lastname: 'bar' };
 
 ```
+
+### Create range Array
+```
+const range = [...Array(9).keys()]; // range === [0,1,2,3,4,5,6,7,8];
+```
+
