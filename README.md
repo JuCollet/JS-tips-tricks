@@ -26,3 +26,22 @@ const foo = {
 const { bar: { boo }} = foo; // boo === 'far';
 const { bar: { boo : newBoo }} = foo; // newBoo === 'far';
 ```
+
+### Conditional object assignment using ES6 destructuring
+```
+const fetched = {
+  name: 'foo',
+  lastname: 'bar',
+};
+
+const user = {
+  phone: '00000',
+  age: '42',
+  ...fetched.name && { name : fetched.name },
+  ...fetched.lastname && { lastname: fetched.lastname },
+  ...fetched.id && { id: fetched.id },
+}
+
+// user === { phone: '00000', age: '42', name: 'foo', lastname: 'bar' };
+
+```
