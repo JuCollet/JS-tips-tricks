@@ -14,3 +14,15 @@ const arr = ['foo', 'bar', 'boo', 'far'];
 const [firstElement,] = arr; // firstElement === 'foo';
 const [first, ...next] = arr // next = ['bar', 'boo', 'far'];
 ```
+
+### Reassign destructured object property
+```
+const foo = {
+  bar: {
+    boo: 'far',
+  },
+};
+
+const { bar: { boo }} = foo; // boo === 'far';
+const { bar: { boo : newBoo }} = foo; // newBoo === 'far';
+```
